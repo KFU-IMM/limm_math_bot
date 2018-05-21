@@ -138,7 +138,7 @@ def handle_fact(message):
 			n = int(message.text) 
 			for k in range (1,n+1): 
 				res = res * k
-				bot.send_message(message.chat.id, str(res)) 
+			bot.send_message(message.chat.id, str(res)) 
 	except BaseException:
 		bot.send_message(message.chat.id, 'Ошибка при вводе числа')
 
