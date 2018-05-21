@@ -142,16 +142,6 @@ def movie_graph(message):
 	#pos = np.where(np.abs(np.diff(fun)) >= 0.5)[0]
 	zs = np.array([fun(x,y) for x,y in zip(np.ravel(X), np.ravel(Y))])
 	Z = zs.reshape(X.shape)
-	#Z [pos] = np.nan
-	#for k in Z:
-	#	if abc(k)>1000:
-	#		k = np.nan
-	#utol = 100
-	#ltol = -100
-	#pos = np.where(np.abs(np.diff(y)) >= 0.5)[0]+1
-	#x = np.insert(x, pos, np.nan)
-	#Z[Z>utol] = np.nan
-	#Z[Z<ltol] = -np.nan
 	v=fun(3,5)
 	s = ax.plot_surface(X, Y, Z, cmap=cm.jet)
 	plt.axis('off') 

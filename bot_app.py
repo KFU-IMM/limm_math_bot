@@ -134,9 +134,13 @@ def handle_fact(message):
 	try:
 		message.text=rstr(message)
 		if(len(message.text)!=0):
-			bot.send_message(message.chat.id, numpy.math.factorial(int(s)))
+			res = int('1') 
+			n = int(message.text) 
+			for k in range (1,n+1): 
+				res = res * k
+				bot.send_message(message.chat.id, str(res)) 
 	except BaseException:
-		bot.send_message(message.chat.id, 'Ошибка факторизации')
+		bot.send_message(message.chat.id, 'Ошибка при вводе числа')
 
 
 @bot.message_handler(commands=['simplify'])
