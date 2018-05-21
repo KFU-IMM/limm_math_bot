@@ -147,4 +147,5 @@ def movie_graph(message):
 	plt.axis('off') 
 	angles = np.linspace(0,360,21)[:-1] 
 
-	rotanimate(ax, angles,'movie.gif', delay=20) 
+	rotanimate(ax, angles,'movie.gif', delay=20)
+	plt.close()
